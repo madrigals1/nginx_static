@@ -1,0 +1,22 @@
+version: '3'
+services:
+  nginx_static: 
+    image: nginx
+    container_name: nginx_static
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - /var/www/static:/var/www/static
+    ports:
+      - 8800:80
+    networks:
+      - proxy
+    environment:
+      - VIRTUAL_HOST=static.adigame.dev
+      - VIRTUAL_PORT=8800
+      - LETSENCRYPT_HOST=static.adigame.dev
+      - LETSENCRYPT_EMAIL=sabyrbayev.adi32@gmail.com
+
+networks:
+  proxy:
+    external:
+      name: nginx-proxy
