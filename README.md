@@ -67,9 +67,8 @@ docker-compose down
 ## Usage
 
 - Put any file inside `DOCKER_STATIC_HOSTING/<path_to_the_file>` folder.
-- File will be accessible under:
-    - `localhost:PORT/<path_to_the_file>` if running without **Dockerized Nginx**
-    - `SSL_DOMAIN/<path_to_the_file>` if running with **Dockerized Nginx**
+- File will be accessible under `<url>/<path_to_the_file>`
+> `<url>` will be `localhost:PORT` if running without **Dockerized Nginx** and `SSL_DOMAIN` if running with **Dockerized Nginx**
 
 ### Authors
 - Adi Sabyrbayev [Github](https://github.com/madrigals1), [LinkedIn](https://www.linkedin.com/in/madrigals1/)
