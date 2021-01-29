@@ -70,5 +70,5 @@ docker-compose down
 - File will be accessible under `<url>/<path_to_the_file>`
 > `<url>` will be `localhost:PORT` if running without **Dockerized Nginx** and `SSL_DOMAIN` if running with **Dockerized Nginx**
 
-### Authors
+## Authors
 - Adi Sabyrbayev [Github](https://github.com/madrigals1), [LinkedIn](https://www.linkedin.com/in/madrigals1/)
