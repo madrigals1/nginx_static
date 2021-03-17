@@ -14,7 +14,6 @@ services:
       VIRTUAL_HOST: ${SSL_DOMAIN}
       VIRTUAL_PORT: ${PORT}
       LETSENCRYPT_HOST: ${SSL_DOMAIN}
-      LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL}
 
 networks:
   proxy:
