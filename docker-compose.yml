@@ -9,13 +9,13 @@ services:
     ports:
       - "${PORT}:80"
     networks:
-      - proxy
+      - https
     environment:
       VIRTUAL_HOST: ${SSL_DOMAIN}
       VIRTUAL_PORT: ${PORT}
       LETSENCRYPT_HOST: ${SSL_DOMAIN}
 
 networks:
-  proxy:
+  https:
     external:
-      name: ${NGINX_PROXY_NETWORK}
+      name: ${HTTPS_NETWORK}
