@@ -31,8 +31,8 @@ PORT=8800
 DOCKER_STATIC_HOSTING=/var/www/static
 
 # Letsencrypt settings
-SSL_DOMAIN="static.example.com"
-LETSENCRYPT_EMAIL="user@example.com"
+SSL_DOMAIN=static.example.com
+LETSENCRYPT_EMAIL=user@example.com
 HTTPS_NETWORK=https_network
 ```
 
