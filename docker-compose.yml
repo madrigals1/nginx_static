@@ -2,6 +2,7 @@ version: '3'
 services:
   nginx_static: 
     image: nginx
+    restart: always
     container_name: nginx_static
     volumes:
       - "./nginx.conf:/etc/nginx/nginx.conf"
