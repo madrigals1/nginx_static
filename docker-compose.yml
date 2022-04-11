@@ -1,6 +1,6 @@
 version: '3'
 services:
-  nginx_static: 
+  nginx_static:
     image: nginx
     container_name: nginx_static
     volumes:
@@ -10,10 +10,6 @@ services:
       - "${PORT}:80"
     networks:
       - https
-    environment:
-      VIRTUAL_HOST: ${SSL_DOMAIN}
-      VIRTUAL_PORT: ${PORT}
-      LETSENCRYPT_HOST: ${SSL_DOMAIN}
 
 networks:
   https:
