@@ -1,4 +1,5 @@
-version: '3'
+version: "3.8"
+
 services:
   nginx_static:
     image: nginx
@@ -14,5 +15,5 @@ services:
 
 networks:
   https:
-    external:
-      name: ${HTTPS_NETWORK}
+    name: ${HTTPS_NETWORK}
+    external: true
