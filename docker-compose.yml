@@ -5,10 +5,14 @@ services:
     image: nginx
     restart: unless-stopped
     container_name: nginx_static
+    user: "${USER_ID}"
     volumes:
       - "./nginx.conf:/etc/nginx/nginx.conf"
       - "${DOCKER_STATIC_HOSTING}:/var/www/static"
       - "${WEBSITES_FOLDER}:/var/www/html"
+      - "./.nginx/cache:/var/cache/nginx"
+      - "./.nginx/logs:/var/log/nginx"
+      - "./.nginx/run:/var/run/nginx"
     ports:
       - "${PORT}:80"
     networks:
